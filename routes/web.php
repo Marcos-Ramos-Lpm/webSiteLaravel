@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::namespace('site')->group(function(){
+
+Route::get('/', 'HomeController');
+Route::get('produto', 'CategoriaController@index');
+Route::get('produto/{slug}', 'CategoriaController@show');
+Route::get('sobre', 'SobreController@index');
+Route::get('contato', 'ContatoController@index');
+
+Route::post('contato', 'ContatoController@create');
 });

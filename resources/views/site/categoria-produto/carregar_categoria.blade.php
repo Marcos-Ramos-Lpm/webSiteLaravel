@@ -1,0 +1,1 @@
+carregar todas categorias de produtos: {{$slug}}
