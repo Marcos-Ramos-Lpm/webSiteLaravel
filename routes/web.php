@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::namespace('site')->group(function(){
 
-Route::get('/', 'HomeController');
-Route::get('produto', 'CategoriaController@index');
-Route::get('produto/{slug}', 'CategoriaController@show');
-Route::get('sobre', 'SobreController@index');
-Route::get('contato', 'ContatoController@index');
+Route::get('/', 'HomeController')->name('site.home');
+Route::get('produto', 'CategoriaController@index')->name('site.produto');
+Route::get('produto/{slug}', 'CategoriaController@show')->name('site.produto.categoria');
+Route::get('sobre', 'SobreController@index')->name('site.sobre');
+Route::get('contato', 'ContatoController@index')->name('site.contato');
 
-Route::post('contato', 'ContatoController@create');
+Route::post('contato', 'ContatoController@create')->name('site.contato.form');
 });

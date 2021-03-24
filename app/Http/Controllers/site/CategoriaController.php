@@ -14,7 +14,7 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        return view('site.categoria-produto.index_categoria');
+        return view('site.produto.index_produto');
     }
 
     /**

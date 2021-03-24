@@ -1,1 +1,1 @@
-aqui e a categoria de produtos
+@extends('site.layouts.site')
